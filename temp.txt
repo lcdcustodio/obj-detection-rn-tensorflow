@@ -1,0 +1,35 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+
+import * as tf from '@tensorflow/tfjs'; //done
+import React, { Component } from 'react';
+import { ActivityIndicator, TouchableOpacity, Image } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'; //done
+
+import Constants from 'expo-constants' //done
+import * as Permissions from 'expo-permissions' //done
+import * as ImagePicker from 'expo-image-picker' //done
+import * as FileSystem from 'expo-file-system' //done
+
+import * as jpeg from 'jpeg-js' //done
+
+import '@tensorflow/tfjs-react-native'; //done
+import * as cocossd from '@tensorflow-models/coco-ssd'
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Hello!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
